@@ -15,7 +15,7 @@
 				<a href="#about"><li>Présentation</li></a>
                 <a href="#skills"><li>Compétences</li></a>
                 <a href="#portfolio"><li>Portfolio</li></a>
-                <a href="#"><li>Contact</li></a>
+                <a href="#contact"><li>Contact</li></a>
                 <a href="doc/CV_2020.pdf" target="_blank"><li>Télécharger mon CV en PDF</li></a>
 			</ul>
         </nav>
@@ -261,14 +261,14 @@
        
         <div class="pimg1" data-parallax="scroll" data-image-src="img/img01.jpg">
             
-            <div class="contact">
+            <div class="contact" id="contact">
                 <?php
                 if(isset($_POST['formbtn']))
                 {
                     if(!empty($_POST['name']) AND !empty($_POST['subject']) AND !empty($_POST['email']) AND !empty($_POST['message']) )
                     {
                         $header="MIME-Version: 1.0\r\n";
-                        $header.='julybrn60@gmail.com'."\n";
+                        $header.='From:julybrn60@gmail.com'."\n";
                         $header.='Content-Type:text/html; charset="uft-8"'."\n";
                         $header.='Content-Transfer-Encoding: 8bit';
 
@@ -282,18 +282,14 @@
                         mail('julybrn60@gmail.com' , $subject , $message, $header);
                         $msg = "Votre mail à bien été envoyé.";
                     }
-                    else
-                    {
-                        $msg = "Tous les champs doivent être complétés";
-                    }
                 }
                 ?>
     
-                <form action="" method="POST" name="contact-form" class="form-contact">
-                        <input type="text" name="name" id="name" placeholder="Votre nom" class="formtxt" value= "<?php if(isset($_POST['name'])) { echo $_POST['name'];}?>">
-                        <input type="text" name="subject" id="subject" placeholder="Sujet"class="formtxt" value= "<?php if(isset($_POST['subject'])) { echo $_POST['subject'];}?>"><br />
-                        <input type="email" name="email" id="email" placeholder="E-mail"class="formtxt" value= "<?php if(isset($_POST['email'])) { echo $_POST['email'];}?>"><br />
-                        <textarea id="message" placeholder="Votre message"name="message" rows="5" cols="33" value= "<?php if(isset($_POST['message'])) { echo $_POST['message'];}?>"></textarea>
+                <form action="#contact" method="POST" name="contact-form" class="form-contact"required>
+                        <input type="text" name="name" id="name" placeholder="Votre nom" class="formtxt"required minlength="2" maxlength="40">
+                        <input type="text" name="subject" id="subject" placeholder="Sujet"class="formtxt"required maxlength="50"><br />
+                        <input type="email" name="email" id="email" placeholder="E-mail"class="formtxt"required><br />
+                        <textarea id="message" placeholder="Votre message"name="message" rows="5" cols="33"required minlength="5"></textarea>
                         <input type="submit" placeholder="Envoyer" name="formbtn" class="formbtn">
                             
                 </form>

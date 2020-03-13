@@ -358,7 +358,7 @@ a:link
 	font-size: 16px;
 	margin: 5px 0 20px 0;
 	padding: 18px 0;
-	width: 100%;
+	width: 80%;
 	border-radius: 3px;
 	opacity: 0.9;
 	font-family: 'Bebas Neue', cursive;
@@ -412,6 +412,12 @@ a:link
 {
 	margin-right: 15px;
 }
+
+input:invalid, textarea:invalid
+{
+	box-shadow: 0 0 5px 1px black;
+}
+
 
 
 
