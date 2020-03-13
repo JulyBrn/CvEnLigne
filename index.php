@@ -260,20 +260,51 @@
         </div>
        
         <div class="pimg1" data-parallax="scroll" data-image-src="img/img01.jpg">
+            
             <div class="contact">
+                <?php
+                if(isset($_POST['formbtn']))
+                {
+                    if(!empty($_POST['name']) AND !empty($_POST['subject']) AND !empty($_POST['email']) AND !empty($_POST['message']) )
+                    {
+                        $header="MIME-Version: 1.0\r\n";
+                        $header.='julybrn60@gmail.com'."\n";
+                        $header.='Content-Type:text/html; charset="uft-8"'."\n";
+                        $header.='Content-Transfer-Encoding: 8bit';
 
-           
-                <form action="mail.php" method="POST" name="contact-form" class="form-contact">
-                        <input type="text" name="name" id="name" placeholder="Votre nom" class="formtxt">
-                        <input type="text" name="subject" id="subject" placeholder="Sujet"class="formtxt"><br />
-                        <input type="email" name="email" id="email" placeholder="E-mail"class="formtxt"><br />
-                        <textarea id="message" name="message" rows="5" cols="33">Votre message</textarea>
-                        <input type="submit" placeholder="Envoyer" class="formbtn">
+                        $subject= $_POST['subject'];
+                        $message='
+                        Nom de l\'expéditeur : '.$_POST['name'].'
+                        Mail de l\'expéditeur :'.$_POST['email'].'
+                                    '.nl2br($_POST['message']).'
+                        ';
+
+                        mail('julybrn60@gmail.com' , $subject , $message, $header);
+                        $msg = "Votre mail à bien été envoyé.";
+                    }
+                    else
+                    {
+                        $msg = "Tous les champs doivent être complétés";
+                    }
+                }
+                ?>
+    
+                <form action="" method="POST" name="contact-form" class="form-contact">
+                        <input type="text" name="name" id="name" placeholder="Votre nom" class="formtxt" value= "<?php if(isset($_POST['name'])) { echo $_POST['name'];}?>">
+                        <input type="text" name="subject" id="subject" placeholder="Sujet"class="formtxt" value= "<?php if(isset($_POST['subject'])) { echo $_POST['subject'];}?>"><br />
+                        <input type="email" name="email" id="email" placeholder="E-mail"class="formtxt" value= "<?php if(isset($_POST['email'])) { echo $_POST['email'];}?>"><br />
+                        <textarea id="message" placeholder="Votre message"name="message" rows="5" cols="33" value= "<?php if(isset($_POST['message'])) { echo $_POST['message'];}?>"></textarea>
+                        <input type="submit" placeholder="Envoyer" name="formbtn" class="formbtn">
                             
                 </form>
                 <?php
-                
+
+                    if(isset($msg))
+                    {
+                        echo $msg;
+                    }
                 ?>
+
                 <div class="other-contact">
 
                     <div class="around-other-contact">
