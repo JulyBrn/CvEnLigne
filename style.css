@@ -346,15 +346,17 @@ html
 
 .contact
 {
-	width: 100%;
+	width: 70%;
 	display: flex;
-	flex-direction: row-reverse;
-	justify-content: space-around;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .form-contact
 {
 	width: 45%;
+	text-align: center;
 
 }
 
@@ -428,6 +430,21 @@ input:invalid, textarea:invalid
 	padding-bottom: 10px;
 }
 
+.contactTitle
+{
+	display: flex;
+	font-family: 'Bebas Neue', cursive;
+	color: #fff;
+	font-size: 50px;
+	padding: 35px;
+}
+
+.mailconfirm
+{
+	font-family: 'Bebas Neue', cursive;
+	color: rgba(255,255,255, 0.9);
+	font-size: 30px;
+}
 
 
 
