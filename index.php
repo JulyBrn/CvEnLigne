@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet"/> 
     <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" media="screen and (max-width: 780px)" href="mediaquery.css" />
-    <link rel="stylesheet" media="screen and (max-width: 375px)" href="mediaquery2.css" />
+    <link rel="stylesheet" media="screen and (max-width: 780px)" href="style780.css" />
+    <link rel="stylesheet" media="screen and (max-width: 375px)" href="style375.css" />
     
     <title>July Brisson/ Développeuse Web Junior </title>
 </head>
