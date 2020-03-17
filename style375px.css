@@ -1,4 +1,4 @@
-@media all and (max-width: 375px)
+@media all and (max-width: 320px)
 {
     .generate-sections-container.enable-parallax
     {
@@ -97,5 +97,22 @@
     .form-contact
     {
         width: 90%;
+    }
+
+    .form-contact .formbtn
+    {
+        margin: 0;
+    }
+
+    .mailconfirm
+    {
+        font-size: 10px;
+        margin: 0 0 20px 0;
+        padding: 0;
+    }
+
+    .menu-nav li
+    {
+        font-size: 17px;
     }
 }
