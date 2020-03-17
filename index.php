@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet"/> 
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 780px)" href="mediaquery.css" />
+    <link rel="stylesheet" media="screen and (max-width: 375px)" href="mediaquery2.css" />
     
     <title>July Brisson/ Développeuse Web Junior </title>
 </head>
@@ -45,13 +47,14 @@
             </div>
 
             <div class="img_about">
+            <div class="move-img">
                 <img class="img02" src="img/myself.jpg">
+                </div>
 
                 <div class="about_text">
                     <ul>
                         <li>27 ans</li>
                         <li>Permis B</li>
-                        <li> Français et Anglais </li>
                     </ul>
                 </div>
             </div>
@@ -133,15 +136,15 @@
             <h2 class="portfolioTitle">portfolio</h2>
             <div class="allProject">
                 <div class="project1" >
-                    <img src="img/project.png" style="width: 400px">
+                    <img src="img/project.png" alt="Attribution image : freepik">
                     <h3 class="projecttitle">Projet 1</h3>
                 </div>
-                <div class="project1" >
-                    <img src="img/project.png" style="width: 400px">
+                <div class="project2" >
+                    <img src="img/project.png" alt="Attribution image : freepik">
                     <h3 class="projecttitle">Projet 2</h3>
                 </div>
-                <div class="project1" >
-                    <img src="img/project.png" style="width: 400px">
+                <div class="project3" >
+                    <img src="img/project.png" alt="Attribution image : freepik">
                     <h3 class="projecttitle">Projet 3</h3>
                 </div>
             </div>
@@ -199,6 +202,9 @@
         </div>
         </div>
     </main>
+    <footer>
+        <p class="copyright"><svg width="10px" aria-hidden="true" focusable="false" data-prefix="far" data-icon="copyright" class="svg-inline--fa fa-copyright fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#141136" d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"></path></svg>July Brisson 2020 </p>
+    </footer>
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

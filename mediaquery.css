@@ -1,0 +1,69 @@
+@media all and (max-width: 780px)
+{
+    .generate-sections-container.enable-parallax
+    {
+        background-position: center top !important;
+    }
+
+    .navbar
+    {
+        width: 100%;
+        
+    }
+
+    .manu-nav
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar li
+    {
+        padding-left: 4px;
+    }
+
+    .pimg01
+    {
+        height: 500px;
+    }
+
+    .img02
+    {
+        width: 200px;
+        height: 200px;
+        box-shadow: 3px -8px 25px -1px rgba(20, 17, 54, 0.75);
+        margin-top: 50px;
+    }
+
+    .title_about
+    {
+        font-size: 34px;
+    }
+
+    .subtitle_about
+    {
+        font-size: 17px;
+    }
+
+    .all
+    {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .allskills
+    {
+        width: 60%;
+    }
+
+    .otherSkills
+    {
+        margin-top: 15px;
+    }
+
+    .content-title
+    {
+        padding-bottom: 50px;
+    }
+}

@@ -20,6 +20,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body
 {
 	line-height: 1;
+	width: 100%;
 }
 ol, ul
 {
@@ -102,8 +103,7 @@ html
 	rgba(255,255,255, 0.9);
 	height: 65px;
 	width: 100%;
-	align-items: center;
-	margin: auto;
+	align-items: center;	
 }
 
 .menu-nav li
@@ -149,29 +149,31 @@ html
 .text_about
 {
     display: flex;
-    width: 50%;
+    width: 45%;
 	flex-direction: column;
 	text-align: center;
-}
-
-.video_intro
-{
-	position: absolute;
 }
 
 .content_about
 {
 	display: flex;
 	justify-content: space-around;
-	padding: 50px;
+	width: 100%;
 }
 
 .img02
 {
-	width : 250px; height : 250px;
-	border: none;
+	width : 250px;
+	height : 250px;
 	border-radius : 175px;
 	box-shadow: 10px -8px 25px -1px rgba(20, 17, 54, 0.75);
+}
+
+.move-img
+{
+	display: flex;
+	justify-content: center;
+	padding-top: 40px;
 }
 
 .about_text
@@ -186,12 +188,12 @@ html
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	width: 45%;
 }
 
 .skills
 {
 	position: relative;
-	width: 500px;
 }
 .skills .skill
 {
@@ -207,36 +209,15 @@ html
 	opacity: 0.9;
 }
 
-.skills .skill::before
-{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 50%;
-	background: rgba(255, 255, 255, .1);
-	z-index: 10;
-}
-
 .skills .skill .Name
 {
 	position: relative;
-	width: 110px;
+	width: 90px;
 	text-align: right;
 	color: #ffffff;
 	margin-top: -2px;
 	font-family: 'Bebas Neue', cursive;
-}
-
-.skills .skill .value
-{
-	position: relative;
-	width: 40px;
-	text-align: left;
-	color: #ffffff;
-	margin-top: -2px;
-	font-family: 'Bebas Neue', cursive;
+	font-size: 20px;
 }
 
 .skills .skill .percent
@@ -266,7 +247,7 @@ html
 
 .allskills
 {
-	width: 40%;
+	width: 45%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -282,7 +263,7 @@ html
 
 .otherSkill
 {
-	width: 40%;
+	width: 45%;
 	text-align: center;
 	background: rgba(0,0,0,0.5);
 	border-radius: 8px;
@@ -331,8 +312,29 @@ html
 {
 	display: flex;
 	justify-content: space-around;
-	padding-top: 50px;
+	padding-top: 30px;
+	width: 100%;
 }
+
+.project1, .project2, .project3
+{
+	width: 25%;
+}
+
+.project1 img:hover, .project2 img:hover, .project3 img:hover
+{
+	opacity: 0.2;
+	cursor: pointer;
+	
+}
+
+.project1 img, .project2 img, .project3 img
+{
+	width: 100%;
+	border-radius: 5px;
+} 
+
+
 
 .projecttitle
 {
@@ -435,8 +437,11 @@ input:invalid, textarea:invalid
 	display: flex;
 	font-family: 'Bebas Neue', cursive;
 	color: #fff;
-	font-size: 50px;
-	padding: 35px;
+	font-size: 40px;
+	padding: 10px;
+    background: rgba(0,0,0,0.4);
+    margin: 30px;
+    border-radius: 10px;
 }
 
 .mailconfirm
@@ -444,8 +449,26 @@ input:invalid, textarea:invalid
 	font-family: 'Bebas Neue', cursive;
 	color: rgba(255,255,255, 0.9);
 	font-size: 30px;
+	background: rgba(0,0,0,0.4);
+    margin: 20px;
+	border-radius: 10px;
+	padding: 10px;
 }
 
+footer
+{
+	width: 100%;
+	height: 20px;
+}
+
+.copyright
+{
+	color: #141136;
+	font-family: 'Bebas Neue', cursive;
+	text-align: center;
+	padding: 5px;
+
+}
 
 
 
