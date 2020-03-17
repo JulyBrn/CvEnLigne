@@ -73,19 +73,14 @@
     .allskills
     {
         padding-bottom: 30px;
+        width: 90%;
     }
 
     .otherSkill
     {
-        width: 55%;
+        width: 90%;
     }
-/*
-    .otherSkill > svg
-    {
-        width: 30px;
-        margin: 20px;
-    }
-*/
+
     .skillLogo
     {
         display: flex;
@@ -94,7 +89,13 @@
 
     }
 
-    .skillLogo svg{
+    .skillLogo svg
+    {
         margin: 0 5px
+    }
+
+    .form-contact
+    {
+        width: 90%;
     }
 }
