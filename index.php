@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" media="screen and (max-width: 780px)" href="style780px.css" />
     <link rel="stylesheet" media="screen and (max-width: 375px)" href="style375px.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <title>July Brisson</title>
 </head>
@@ -37,7 +38,7 @@
             <div class="content_about" id="about">
                 <div class="AboutContainer"  >
                     <div class="content_text">
-                        <p class="text_about" ><span class="RCC">Rêveuse, curieuse et créative</span> je suis capable de confectionner un site de A à Z et d'aller au bout de mes idées. <span class="RCC">Désireuse de nouveaux challenges</span>, motivée pour apprendre, rigoureuse et travailleuse, je suis ouverte à toute proposition de travail.</p>
+                        <p class="text_about" id="textAbout"><span class="RCC">Rêveuse, curieuse et créative</span> je suis capable de confectionner un site de A à Z et d'aller au bout de mes idées. <span class="RCC">Désireuse de nouveaux challenges</span>, motivée pour apprendre, rigoureuse et travailleuse, je suis ouverte à toute proposition de travail.</p>
                         <div class="logo">
                             <a href="https://www.linkedin.com/in/Brisson-July/" target="_blank"><svg style="width:30px" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#291C54" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>
                             
@@ -54,10 +55,10 @@
             <div class="content_project" id="portfolio">
                 <div class="project_1">
                     <div class="project_1_img">
-                        <img src="img/p1.jpg" alt="" srcset="">
+                        <img src="img/p1.jpg" alt="" srcset="" id="projet1IMG">
                     </div>
                     <div class="project_1_txt">
-                        <div class="project_1_txtAll">
+                        <div class="project_1_txtAll" id="projet1TXT">
                             <p class="p1Title">OURSTREET</p>
                             <h2 class="p1about" >Projet personnel réalisé pour mon examen en html5/css3, javascript et symfony</h2>
                             <p class="p1Go" ><a href="https://ourstreet.julybrisson.com/" target="_blank">Voir le projet</a></p>
@@ -67,23 +68,23 @@
 
                 <div class="project_2">
                     <div class="project_2_txt">
-                        <div class="project_2_txtAll">
+                        <div class="project_2_txtAll" id="projet2TXT">
                             <p class="p2Title">SURFIN PARIS</p>
                             <h2 class="p2about" >réaliser un site vitrine sous Wordpress pour promouvoir une vague à surf</h2>
                             <p class="p2Go" ><a href="https://surf-paris.fr/" target="_blank">Voir le projet</a></p>
                         </div>
                     </div>
                     <div class="project_2_img">
-                        <img src="img/p2.jpg" alt="" srcset="">
+                        <img src="img/p2.jpg" alt="" srcset="" id="projet2IMG">
                     </div>
                 </div>
 
                 <div class="project_3">
                     <div class="project_1_img">
-                        <img src="img/img01.jpg" alt="" srcset="">
+                        <img src="img/img01.jpg" alt="" srcset="" id="projet3IMG">
                     </div>
                     <div class="project_1_txt">
-                        <div class="project_1_txtAll">
+                        <div class="project_1_txtAll" id="projet3TXT">
                             <p class="p1Title">Mon Portfolio</p>
                             <h2 class="p1about" >Ce site est réalisé avec html5/css3 et javascript </h2>
                             <p class="p1Go" ><a href="https://ourstreet.julybrisson.com/" target="_blank"></a></p>
@@ -117,6 +118,7 @@
     <script src="parallax.min.js"></script>
     <script src="nav.js"></script>
     <script src="skill.js"></script>
+    <script src="Anim.js"></script>
 </body>
     
 </body>
