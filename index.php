@@ -10,6 +10,7 @@
     <link rel="stylesheet" media="screen and (max-width: 780px)" href="style780px.css" />
     <link rel="stylesheet" media="screen and (max-width: 375px)" href="style375px.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="media778.css">
     
     <title>July Brisson</title>
 </head>

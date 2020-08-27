@@ -1,7 +1,7 @@
 
 
 window.onscroll = function scrollFunction() {
-  if (document.body.scrollTop >= 150 || document.documentElement.scrollTop >= 150) {
+  if (document.body.scrollTop >= 690 || document.documentElement.scrollTop >= 690) {
     var elements = document.getElementsByClassName("nav_select"), i, len;
     for (i = 0, len = elements.length; i < len; i++) {
       elements[i].style.color = '#291C54';
