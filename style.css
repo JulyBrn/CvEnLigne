@@ -103,59 +103,37 @@
 	}
 }
 
-.pulse {
-	-webkit-animation-name: pulse;
-	animation-name: pulse;
+.zoomIn
+{
+	-webkit-animation-name: zoomIn;
+	animation-name: zoomIn;
 	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
-	}
-	@-webkit-keyframes pulse {
-	0% {
-	-webkit-transform: scale3d(1, 1, 1);
-	transform: scale3d(1, 1, 1);
-	}
-	50% {
-	-webkit-transform: scale3d(1.05, 1.05, 1.05);
-	transform: scale3d(1.05, 1.05, 1.05);
-	}
-	100% {
-	-webkit-transform: scale3d(1, 1, 1);
-	transform: scale3d(1, 1, 1);
-	}
-	}
-	@keyframes pulse {
-	0% {
-	-webkit-transform: scale3d(1, 1, 1);
-	transform: scale3d(1, 1, 1);
-	}
-	50% {
-	-webkit-transform: scale3d(1.05, 1.05, 1.05);
-	transform: scale3d(1.05, 1.05, 1.05);
-	}
-	100% {
-	-webkit-transform: scale3d(1, 1, 1);
-	transform: scale3d(1, 1, 1);
-	}
 }
-
-.fadeIn {
-	-webkit-animation-name: fadeIn;
-	animation-name: fadeIn;
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
+@-webkit-keyframes zoomIn {
+	0% {
+	opacity: 0;
+	-webkit-transform: scale3d(.3, .3, .3);
+	transform: scale3d(.3, .3, .3);
 	}
-	@-webkit-keyframes fadeIn {
-	0% {opacity: 0.5; visibility: hidden;}
-	100% {opacity: 1;}
+	50% {
+	opacity: 1;
 	}
-	@keyframes fadeIn {
-	0% {opacity: 0.5;  visibility: hidden;}
-	100% {opacity: 1;}
+	}
+	@keyframes zoomIn {
+	0% {
+	opacity: 0;
+	-webkit-transform: scale3d(.3, .3, .3);
+	transform: scale3d(.3, .3, .3);
+	}
+	50% {
+	opacity: 1;
+	}
 	} 
+
+
 
 /* Reset */
 
@@ -178,6 +156,7 @@ body
 {
 	line-height: 1;
 	width: 100%;
+	font-family: 'Questrial', sans-serif;
 }
 ol, ul
 {
@@ -202,8 +181,7 @@ ul
 	list-style: none;
 }
 
-a:link
-{
+a:link {
 	text-decoration: none;
 }
 
@@ -217,25 +195,24 @@ html
     min-height: 400px;
     height: 100vh;
 	background: transparent;
+	margin-bottom: 100px;
 }
 
 .title
 {
     color: rgb(255, 251, 255);
     font-size: 100px;
-	font-family: 'Questrial', sans-serif;
 	text-transform: uppercase;
-	filter: drop-shadow(2px 4px 6px #291C54);
+	filter: drop-shadow(2px 4px 6px black);
 }
 
 .subtitle
 {
 	color: rgb(255, 251, 255);
     font-size: 70px;
-	font-family: 'Old Standard TT', serif;
 	padding-top: 30px;
 	animation: zoomIn 2.5s ease;
-	filter: drop-shadow(2px 4px 6px #291C54);
+	filter: drop-shadow(2px 4px 6px black);
 }
 
 header {
@@ -254,14 +231,15 @@ header {
 }
 
 .navbar a {
-    font-family: 'Questrial', sans-serif;
     color: #FFFFFF;
     font-size: 18px;
     padding-top: 30px;
-    filter: drop-shadow(2px 4px 6px #291C54);
 	font-weight: 600;
-
 }
+
+.mobile-menu {
+    display: none;
+  }
 
 
 .content_wrapper {
@@ -285,14 +263,22 @@ header {
 	align-items: center;
 	height: 100vh;
 	justify-content: center;
+	margin-bottom: 180px;
 	
 }
 
 .AboutContainer {
 	width: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	padding-top: 100px;
+	align-items: center;
+}
+
+.txtAndImg {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
 }
 
 
@@ -306,19 +292,31 @@ header {
 
 .logo {
 	width: 70%;
-	padding-top: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.logo a {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	color: #232933;
+
 }
 
 .logo svg {
-	margin-left: 10px;
+	margin-right: 10px;
+	width: 20px;
 }
 
 .text_about {
-    font-size: 30px;
-    color: #06050B;
-    font-family: 'Old Standard TT', serif;
+    font-size: 25px;
+    color: #232933;
     width: 70%;
-    line-height: 50px;
+	line-height: 50px;
+	text-align: justify;
 }
 
 .content_img {
@@ -329,7 +327,8 @@ header {
 }
 
 .RCC {
-	font-family: 'Questrial', sans-serif;
+	font-weight: 700;
+	color: #6084A0;
 }
 
 .pic_container {
@@ -382,21 +381,19 @@ header {
 }
 
 .p1Title {
-	font-family: 'Questrial', sans-serif;
 	font-size: 18px;
     font-weight: 600;
 }
 
 .p1about {
-	font-family: 'Old Standard TT', serif;
     font-size: 40px;
     margin: 20px 0 20px 0;
 }
 
 .p1Go a {
-	font-family: 'Questrial', sans-serif;
 	font-size: 18px;
-	color: #291C54;
+	color: #B3C4D0;
+	text-decoration: underline #B3C4D0;
 }
 
 .project_2, .project_3 {
@@ -408,7 +405,7 @@ header {
 
 .project_2_img {
 	width: 50%;
-	height: 70%
+	height: 70%;
 }
 
 .project_2_img img {
@@ -427,25 +424,22 @@ header {
 }
 
 .p2Title {
-	font-family: 'Questrial', sans-serif;
 	font-size: 18px;
     font-weight: 600;
 }
 
 .p2about {
-	font-family: 'Old Standard TT', serif;
     font-size: 40px;
     margin: 20px 0 20px 0;
 }
 
 .p2Go a {
-	font-family: 'Questrial', sans-serif;
 	font-size: 18px;
-	color: #291C54;
+	color: #B3C4D0;
+	text-decoration: underline #B3C4D0;
 }
 
 .console-container {
-	font-family: 'Questrial', sans-serif;
 	font-size: 4em;
 	color: white;
 
@@ -461,10 +455,12 @@ header {
  .skill_container {
 	 width: 100%;
 	 display: flex;
-	 height: calc(100vh - 60px);
+	 height: 100vh;
 	 align-items: center;
 	 justify-content: center;
-	 background-color: #000;
+	 background-image: url("img/img02.jpeg");
+	 object-fit: cover;
+	 background-position: center;
  }
 
 .contact-Container {
@@ -480,21 +476,18 @@ header {
 }
 
 .contact-text {
-	font-family: 'Old Standard TT', serif;
 	font-size: 100px;
-	color: #291C54;
+	color: #232933;
 }
 
 .contact-link {
-
-	font-family: 'Questrial', sans-serif;
 	font-size: 80px;
-	color: #291C54;	
+	color: #232933;	
 }
 
 .contact-link:hover {
-	color: #795AEE;
-	text-decoration: underline #795AEE;
+	color: #7B9EB5;
+	text-decoration: underline #7B9EB5;
 }
 
 footer
@@ -506,61 +499,20 @@ footer
 
 .copyright
 {
-	color: #141136;
-	font-family: 'Questrial', sans-serif;
+	color: #232933;
 	text-align: center;
 	padding: 5px;
 
 }
 
-/* Keyframes */
-
-@keyframes animate
-{
-	from
-	{
-		width: 0;
-	}
+.HardSkill {
+	font-size: 20px;
+    color: #6084A0;
+    width: 100%;
+	text-align: center;
+	padding-top: 50px;
 }
 
-
-
-
-.zoomIn
-{
-	-webkit-animation-name: zoomIn;
-	animation-name: zoomIn;
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-}
-@-webkit-keyframes zoomIn {
-	0% {
-	opacity: 0;
-	-webkit-transform: scale3d(.3, .3, .3);
-	transform: scale3d(.3, .3, .3);
-	}
-	50% {
-	opacity: 1;
-	}
-	}
-	@keyframes zoomIn {
-	0% {
-	opacity: 0;
-	-webkit-transform: scale3d(.3, .3, .3);
-	transform: scale3d(.3, .3, .3);
-	}
-	50% {
-	opacity: 1;
-	}
-	} 
-
-
-
-	
-  
-  
 
 
 

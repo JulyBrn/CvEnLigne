@@ -1,4 +1,54 @@
 @media(max-width: 778px) { 
+
+     /* Navbar --> Menu Burger */
+     header {
+        width: 100%;
+        height: auto;
+      }
+      header .navbar {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        z-index: 2000;
+        width: 100%;
+    }
+      .nav_select {
+        display: none;
+        justify-content: center;
+        width: 15%;
+        font-weight: bold;
+      }
+
+      .nav_select a {
+        color: #fff;
+        text-decoration: none;
+        padding:0 0.5em;
+      }
+      .mobile-menu {
+      z-index: 1000;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 30px;
+     }
+    
+      .menu-icon {
+        font-size: 40px;
+        cursor: pointer;
+        color: #fff;
+        filter: drop-shadow(2px 4px 6px black);
+      }
+
+      .hide {
+        display: none;
+      }
+      .show {
+        display: inline-flex;
+        background: #291C54;
+        width: 100%;
+      }
+/* end navbar */
     .title {
         font-size: 80px;
     }

@@ -1,0 +1,71 @@
+@media(max-width: 576px) {
+    .title {
+        font-size: 60px;
+    }
+
+    .subtitle {
+        font-size: 30px
+    }
+
+    .txtAndImg {
+        flex-direction: column-reverse;
+        padding-top: 100px;
+    }
+
+    .content_text {
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .content_img {
+        width: 100%;
+    }
+
+    .pic_container {
+        width: 45%;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .project_1, .project_3 {
+        flex-direction: column;
+    }
+
+    .project_1_img, .project_2_img {
+        width: 100%;
+    }
+
+    .project_1_txt, .project_2_txt{
+        width: 100%;
+        padding-top: 60px;
+    }
+
+    .project_2 {
+        flex-direction: column-reverse;
+    }
+
+    .contact-text {
+        font-size: 60px;
+    }
+
+    .contact-link {
+        font-size: 50px;
+    }
+
+    .HardSkill {
+        margin-bottom: 100px;
+    }
+} 
+
+@media(max-width: 430px) {
+
+    .title {
+        font-size: 45px;
+    }
+
+    .console-container {
+        font-size: 3em;
+    }
+}
