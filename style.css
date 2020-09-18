@@ -261,7 +261,6 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 100vh;
 	justify-content: center;
 	margin-bottom: 180px;
 	
@@ -282,7 +281,7 @@ header {
 }
 
 
-.content_text {
+#content_text {
 	width: 50%;
     display: flex;
     justify-content: center;
@@ -331,15 +330,15 @@ header {
 	color: #6084A0;
 }
 
-.pic_container {
+#pic_container {
 	width: 40%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.pic_container img {
+#pic_container img {
     width: 100%;
-    filter: grayscale(0.6);
+    filter: grayscale(0.8);
     border-radius: 5px;
 }
 
@@ -351,7 +350,7 @@ header {
 }
 
 
-.project_1 {
+#project_1 {
 	display: flex;
 	width: 100%;
 	flex-direction: row;
@@ -375,7 +374,7 @@ header {
 	align-items: center;
 }
 
-.project_1_txtAll {
+#projet1TXT {
 	width: 50%;
 	
 }
@@ -396,7 +395,7 @@ header {
 	text-decoration: underline #B3C4D0;
 }
 
-.project_2, .project_3 {
+#project_2 {
 	display: flex;
 	width: 100%;
 	flex-direction: row;

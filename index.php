@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="media778.css">
@@ -42,7 +43,7 @@
             <div class="content_about" id="about">
                 <div class="AboutContainer">
                     <div class="txtAndImg">
-                        <div class="content_text">
+                        <div id="content_text" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                             <p class="text_about" id="textAbout"><span class="RCC">Dynamique, curieuse, créative et pointilleuse</span> je suis capable de confectionner un site de A à Z et d'aller au bout de mes idées. <span class="RCC">Ambitieuse, désireuse de nouveaux challenges</span>, motivée pour apprendre, rigoureuse et travailleuse, je suis ouverte à toute proposition de travail</p>
                             <div class="logo">
                                 <a href="https://www.linkedin.com/in/Brisson-July/" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#232933" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>https://www.linkedin.com/in/Brisson-July/</a>
@@ -51,8 +52,8 @@
                             </div>
                         </div>
                         <div class="content_img">
-                            <div class="pic_container">
-                                <img src="img/1.jpg" alt="Pic of myself">
+                            <div id="pic_container" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <img src="img/0.jpg" alt="Pic of myself" srcset="">
                             </div>
                         </div>
                     </div>
@@ -61,12 +62,12 @@
                 </div>
             </div>
             <div class="content_project" id="portfolio">
-                <div class="project_1">
+                <div id="project_1" data-aos="fade-up" data-aos-duration="3000">
                     <div class="project_1_img">
-                        <img src="img/p1.jpg" alt="" id="projet1IMG">
+                        <img src="img/p1.jpg" alt="" srcset="" id="projet1IMG">
                     </div>
                     <div class="project_1_txt">
-                        <div class="project_1_txtAll" id="projet1TXT">
+                        <div  id="projet1TXT">
                             <p class="p1Title">OURSTREET</p>
                             <h2 class="p1about" >Réalisation personnel en html5/css3, javascript et symfony</h2>
                             <p class="p1Go" ><a href="https://ourstreet.julybrisson.com/" target="_blank">Visiter le site</a></p>
@@ -74,7 +75,7 @@
                     </div>
                 </div>
 
-                <div class="project_2">
+                <div id="project_2" data-aos="fade-up" data-aos-duration="3000">
                     <div class="project_2_txt">
                         <div class="project_2_txtAll" id="projet2TXT">
                             <p class="p2Title">SURFIN PARIS</p>
@@ -83,7 +84,7 @@
                         </div>
                     </div>
                     <div class="project_2_img">
-                        <img src="img/p2.jpg" alt="" id="projet2IMG">
+                        <img src="img/p2.jpg" alt="" srcset="" id="projet2IMG">
                     </div>
                 </div>
 
@@ -91,7 +92,7 @@
             <div class="skill_container" id="skills">
                 <div class="console-container">
                     <span id="text"></span>
-                    <div class="console-underscore" id="console"> &#95;</div>
+                    <div class="console-underscore" id="console">&#95</div>
                 </div>
             </div>    
         </div>
@@ -112,9 +113,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="parallax.min.js"></script>
     <script src="skill.js"></script>
-    <script src="Anim.js"></script>
+    <!-- <script src="Anim.js"></script> -->
     <script src="menuBurger.js"></script>
     <script src="media.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </div>
+</body>
+    
 </body>
 </html>

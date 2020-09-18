@@ -9,27 +9,28 @@
 
     .txtAndImg {
         flex-direction: column-reverse;
-        padding-top: 100px;
     }
 
-    .content_text {
+    #content_text {
         width: 100%;
         padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .content_img {
         width: 100%;
     }
 
-    .pic_container {
+    #pic_container {
         width: 45%;
     }
 
     .logo {
         text-align: center;
+        width: 90%;
     }
 
-    .project_1, .project_3 {
+    #project_1 {
         flex-direction: column;
     }
 
@@ -42,7 +43,7 @@
         padding-top: 60px;
     }
 
-    .project_2 {
+    #project_2 {
         flex-direction: column-reverse;
     }
 
@@ -52,10 +53,6 @@
 
     .contact-link {
         font-size: 50px;
-    }
-
-    .HardSkill {
-        margin-bottom: 100px;
     }
 } 
 

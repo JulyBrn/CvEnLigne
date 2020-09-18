@@ -31,13 +31,13 @@
       display: flex;
       justify-content: flex-end;
       padding-right: 30px;
+      background-color: #232933;
      }
     
       .menu-icon {
         font-size: 40px;
         cursor: pointer;
         color: #fff;
-        filter: drop-shadow(2px 4px 6px black);
       }
 
       .hide {
@@ -45,7 +45,7 @@
       }
       .show {
         display: inline-flex;
-        background: #291C54;
+        background: #232933;
         width: 100%;
       }
 /* end navbar */
@@ -62,7 +62,7 @@
         width: 80%;
     }
 
-    .pic_container {
+    #pic_container {
         width: 70%;
     }
 
