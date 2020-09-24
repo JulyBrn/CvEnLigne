@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="media778.css">
     <link rel="stylesheet" href="media576.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     
     <title>July Brisson</title>
 </head>
@@ -61,32 +63,61 @@
                         </p>
                 </div>
             </div>
+
+            <?php
+                try
+                {
+                    $bdd = new PDO('mysql:host=localhost;dbname=perso;charset=utf8', 'root', '');
+                }
+                catch (Exception $e)
+                {
+                    die('Erreur :' . $e->getMessage());
+                }
+
+                $reponse = $bdd->query('SELECT * FROM projetg');
+                
+                while ($donnees = $reponse->fetch())
+                {
+            ?>
             <div class="content_project" id="portfolio">
                 <div id="project_1" data-aos="fade-up" data-aos-duration="3000">
                     <div class="project_1_img">
-                        <img src="img/p1.jpg" alt="" srcset="" id="projet1IMG">
+                        <img src="img/<?php echo $donnees['image'] ?>" alt="" srcset="" id="projet1IMG">
                     </div>
                     <div class="project_1_txt">
                         <div  id="projet1TXT">
-                            <p class="p1Title">OURSTREET</p>
-                            <h2 class="p1about" >Réalisation personnel en html5/css3, javascript et symfony</h2>
-                            <p class="p1Go" ><a href="https://ourstreet.julybrisson.com/" target="_blank">Visiter le site</a></p>
+                            <p class="p1Title"><?php echo $donnees['titre'] ?></p>
+                            <h2 class="p1about" ><?php echo $donnees['description'] ?></h2>
+                            <p class="p1Go" ><a href="<?php echo $donnees['lien'] ?>"target="_blank">Visiter le site</a></p>
                         </div>
                     </div>
                 </div>
+                <?php
+                    }
+                    $reponse->closeCursor();
+
+                    $reponse = $bdd->query('SELECT * FROM projetd');
+                
+                while ($donnees = $reponse->fetch())
+                {
+                 ?>
 
                 <div id="project_2" data-aos="fade-up" data-aos-duration="3000">
                     <div class="project_2_txt">
                         <div class="project_2_txtAll" id="projet2TXT">
-                            <p class="p2Title">SURFIN PARIS</p>
-                            <h2 class="p2about" > Site vitrine sous Wordpress pour promouvoir une vague à surf</h2>
-                            <p class="p2Go" ><a href="https://surf-paris.fr/" target="_blank">Visiter le site</a></p>
+                            <p class="p2Title"><?php echo $donnees['titre'] ?></p>
+                            <h2 class="p2about" > <?php echo $donnees['description'] ?></h2>
+                            <p class="p2Go" ><a href="<?php echo $donnees['lien'] ?>" target="_blank">Visiter le site</a></p>
                         </div>
                     </div>
                     <div class="project_2_img">
-                        <img src="img/p2.jpg" alt="" srcset="" id="projet2IMG">
+                        <img src="img/<?php echo $donnees['image'] ?>" alt="" srcset="" id="projet2IMG">
                     </div>
                 </div>
+                <?php
+                    }
+                    $reponse->closeCursor();
+                 ?>
 
             </div>
             <div class="skill_container" id="skills">
@@ -109,18 +140,18 @@
     </footer>
 
     
-<div class="Allscript">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="parallax.min.js"></script>
-    <script src="skill.js"></script>
-    <!-- <script src="Anim.js"></script> -->
-    <script src="menuBurger.js"></script>
-    <script src="media.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</div>
+    <div class="Allscript">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="parallax.min.js"></script>
+        <script src="skill.js"></script>
+        <!-- <script src="Anim.js"></script> -->
+        <script src="menuBurger.js"></script>
+        <script src="media.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    </div>
 </body>
     
 </body>
