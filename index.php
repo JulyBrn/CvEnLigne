@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./Style/secondStyle.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="media778.css">
     <link rel="stylesheet" href="media576.css">
@@ -67,18 +68,18 @@
             <?php
                 try
                 {
-                    $bdd = new PDO('mysql:host=localhost;dbname=perso;charset=utf8', 'root', '');
+                    $bdd = new PDO('mysql:host=localhost;dbname=perso;charset=utf8', '', '');
                 }
                 catch (Exception $e)
                 {
                     die('Erreur :' . $e->getMessage());
                 }
-
-                $reponse = $bdd->query('SELECT * FROM projetg');
                 
-                while ($donnees = $reponse->fetch())
-                {
-            ?>
+                $reponse = $bdd->query('SELECT * FROM projets');
+                
+                while ($donnees = $reponse->fetch()){
+                    if ($donnees['id'] % 2){
+                        ?>
             <div class="content_project" id="portfolio">
                 <div id="project_1" data-aos="fade-up" data-aos-duration="3000">
                     <div class="project_1_img">
@@ -93,13 +94,9 @@
                     </div>
                 </div>
                 <?php
-                    }
-                    $reponse->closeCursor();
-
-                    $reponse = $bdd->query('SELECT * FROM projetd');
-                
-                while ($donnees = $reponse->fetch())
-                {
+                }
+                else {
+            
                  ?>
 
                 <div id="project_2" data-aos="fade-up" data-aos-duration="3000">
@@ -115,6 +112,7 @@
                     </div>
                 </div>
                 <?php
+                }
                     }
                     $reponse->closeCursor();
                  ?>
